@@ -371,7 +371,7 @@ class DCGAN(object):
                 return tf.nn.sigmoid(deconv2d(h2, [self.batch_size, s, s, self.c_dim], name='g_h3'))
 
     def load_mnist(self):
-        data_dir = os.path.join("./data", self.dataset_name)
+        data_dir = os.path.join("/scratch/pas282/data", self.dataset_name)
 
         fd = open(os.path.join(data_dir,'train-images-idx3-ubyte'))
         loaded = np.fromfile(file=fd,dtype=np.uint8)
